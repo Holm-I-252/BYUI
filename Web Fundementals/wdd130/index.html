@@ -4,9 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WDD130 | Home</title>
+    <style>
+        body {
+            background-image: linear-gradient(to bottom right, lightblue, rgb(90, 90, 222));
+            background-size: auto;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0px;
+            height: 1000px;
+        }
+        nav {
+            display: flex;
+             justify-content: space-around;
+              margin-bottom: 50px;
+               margin-top: 20px;
+                font-size: 20px;
+        }
+        a {
+            text-decoration: none;
+             color: black;
+        }
+        a:hover {
+            color: blue;
+            font-size: 21px;
+            text-decoration: underline;
+        }
+        div {
+            background-color: lightgray; border: 2px solid grey; width: 800px; margin-left: auto; margin-right: auto; display:flex; justify-content: center; flex-direction: column; align-items: center;
+        }
+        @keyframes name_color_change {
+            0% {color: blue;}
+            50% {color: green;}
+            100% {color: blue;}
+        }
+        h1 {
+            color:blue;
+            text-align: center;
+            text-decoration: underline;
+            animation-name: name_color_change;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+        }
+        img {
+            box-shadow: -5px 5px 10px black;
+            width: 300px;
+        }
+        p {
+            width: 600px;  font-size: 20px;
+        }
+
+    </style>
 </head>
-<body style="font-family: Arial, Helvetica, sans-serif;">
-    <nav style="display: flex; justify-content: space-around; margin-bottom: 50px; margin-top: 20px; font-size: 20px;">
+<body>
+    <nav>
         <a href="wwr/index.html">White Water Rafting Website</a>
         <a href="wwr/site-plan-rafting.html">White Water Rafting Siteplan</a>
         <a href="positioning.html">Positioning Activity</a>
@@ -14,11 +63,11 @@
         <a href="#">Personal Siteplan</a>
     </nav>   
 
-    <div style="background-color: lightgray; border: 2px solid grey;">
-        <h1 style="color:blue; text-align: center; text-decoration: underline;">Ian Holm</h1>
-        <img src="profile_pic.jpeg" alt="Picture of me" width="300px" style="margin-left: 800px; margin-right: auto; box-shadow: -5px 5px 10px black;">
-        <p style="width: 800px; margin-left: auto; margin-right: auto; font-size: 20px;">Hi! My name is Ian Holm, and I am a student at Brigham Young University Idaho. I love golf, soccer, running, video games, and programming! Before comming back to college, I was a middle school teacher in Utah, teaching computer programming and web development. </p>
-        <p style="width: 800px; margin-left: auto; margin-right: auto; font-size: 20px;">I'm excited to be here at BYUI, and I hope that getting my degree in software engineering will help me to advance my career as a web developer and software engineer. I love programming and all things tech.</p>
+    <div>
+        <h1>Ian Holm</h1>
+        <img src="profile_pic.jpeg" alt="Picture of me">
+        <p>Hi! My name is Ian Holm, and I am a student at Brigham Young University Idaho. I love golf, soccer, running, video games, and programming! Before comming back to college, I was a middle school teacher in Utah, teaching computer programming and web development. </p>
+        <p>I'm excited to be here at BYUI, and I hope that getting my degree in software engineering will help me to advance my career as a web developer and software engineer. I love programming and all things tech.</p>
     </div>
 </body> 
 </html>
