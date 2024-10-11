@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Original 151 Pokémon</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+        li {
+            background-color: #fff;
+            margin: 5px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            width: 20%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        li img {
+            margin-bottom: 10px;
+        }
+
+        #display_pokemon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            flex-direction: column;
+        }
+
+        #display_pokemon img {
+            margin-right: 10px;
+            margin-bottom: 10px;
+            width: 200px;
+        }
+        .active {
+            font-size: 30px;
+            font-weight: 900;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Kanto Pokedex</h1>
+    <div id="display_pokemon">
+
+    </div>
+    <ul>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/bulbasaur.png" alt="Bulbasaur">
+            Bulbasaur
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/ivysaur.png" alt="Ivysaur">
+            Ivysaur
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/venusaur.png" alt="Venusaur">
+            Venusaur
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/charmander.png" alt="Charmander">
+            Charmander
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/charmeleon.png" alt="Charmeleon">
+            Charmeleon
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/charizard.png" alt="Charizard">
+            Charizard
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/squirtle.png" alt="Squirtle">
+            Squirtle
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/wartortle.png" alt="Wartortle">
+            Wartortle
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/blastoise.png" alt="Blastoise">
+            Blastoise
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/caterpie.png" alt="Caterpie">
+            Caterpie
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/metapod.png" alt="Metapod">
+            Metapod
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/butterfree.png" alt="Butterfree">
+            Butterfree
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/weedle.png" alt="Weedle">
+            Weedle
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/kakuna.png" alt="Kakuna">
+            Kakuna
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/beedrill.png" alt="Beedrill">
+            Beedrill
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/pidgey.png" alt="Pidgey">
+            Pidgey
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/pidgeotto.png" alt="Pidgeotto">
+            Pidgeotto
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/pidgeot.png" alt="Pidgeot">
+            Pidgeot
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/rattata.png" alt="Rattata">
+            Rattata
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/raticate.png" alt="Raticate">
+            Raticate
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/spearow.png" alt="Spearow">
+            Spearow
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/fearow.png" alt="Fearow">
+            Fearow
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/ekans.png" alt="Ekans">
+            Ekans
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/arbok.png" alt="Arbok">
+            Arbok
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/pikachu.png" alt="Pikachu">
+            Pikachu
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/raichu.png" alt="Raichu">
+            Raichu
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/sandshrew.png" alt="Sandshrew">
+            Sandshrew
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/sandslash.png" alt="Sandslash">
+            Sandslash
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/nidoran-f.png" alt="Nidoran♀">
+            Nidoran♀
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/nidorina.png" alt="Nidorina">
+            Nidorina
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/nidoqueen.png" alt="Nidoqueen">
+            Nidoqueen
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/nidoran-m.png" alt="Nidoran♂">
+            Nidoran♂
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/nidorino.png" alt="Nidorino">
+            Nidorino
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/nidoking.png" alt="Nidoking">
+            Nidoking
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/clefairy.png" alt="Clefairy">
+            Clefairy
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/clefable.png" alt="Clefable">
+            Clefable
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/vulpix.png" alt="Vulpix">
+            Vulpix
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/ninetales.png" alt="Ninetales">
+            Ninetales
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/jigglypuff.png" alt="Jigglypuff">
+            Jigglypuff
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/wigglytuff.png" alt="Wigglytuff">
+            Wigglytuff
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/zubat.png" alt="Zubat">
+            Zubat
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/golbat.png" alt="Golbat">
+            Golbat
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/oddish.png" alt="Oddish">
+            Oddish
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/gloom.png" alt="Gloom">
+            Gloom
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/vileplume.png" alt="Vileplume">
+            Vileplume
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/paras.png" alt="Paras">
+            Paras
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/parasect.png" alt="Parasect">
+            Parasect
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/venonat.png" alt="Venonat">
+            Venonat
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/venomoth.png" alt="Venomoth">
+            Venomoth
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/diglett.png" alt="Diglett">
+            Diglett
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/dugtrio.png" alt="Dugtrio">
+            Dugtrio
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/meowth.png" alt="Meowth">
+            Meowth
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/persian.png" alt="Persian">
+            Persian
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/psyduck.png" alt="Psyduck">
+            Psyduck
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/golduck.png" alt="Golduck">
+            Golduck
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/mankey.png" alt="Mankey">
+            Mankey
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/primeape.png" alt="Primeape">
+            Primeape
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/growlithe.png" alt="Growlithe">
+            Growlithe
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/arcanine.png" alt="Arcanine">
+            Arcanine
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/poliwag.png" alt="Poliwag">
+            Poliwag
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/poliwhirl.png" alt="Poliwhirl">
+            Poliwhirl
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/poliwrath.png" alt="Poliwrath">
+            Poliwrath
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/abra.png" alt="Abra">
+            Abra
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/kadabra.png" alt="Kadabra">
+            Kadabra
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/alakazam.png" alt="Alakazam">
+            Alakazam
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/machop.png" alt="Machop">
+            Machop
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/machoke.png" alt="Machoke">
+            Machoke
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/machamp.png" alt="Machamp">
+            Machamp
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/bellsprout.png" alt="Bellsprout">
+            Bellsprout
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/weepinbell.png" alt="Weepinbell">
+            Weepinbell
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/victreebel.png" alt="Victreebel">
+            Victreebel
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/tentacool.png" alt="Tentacool">
+            Tentacool
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/tentacruel.png" alt="Tentacruel">
+            Tentacruel
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/geodude.png" alt="Geodude">
+            Geodude
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/graveler.png" alt="Graveler">
+            Graveler
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/golem.png" alt="Golem">
+            Golem
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/ponyta.png" alt="Ponyta">
+            Ponyta
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/rapidash.png" alt="Rapidash">
+            Rapidash
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/slowpoke.png" alt="Slowpoke">
+            Slowpoke
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/slowbro.png" alt="Slowbro">
+            Slowbro
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/magnemite.png" alt="Magnemite">
+            Magnemite
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/magneton.png" alt="Magneton">
+            Magneton
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/farfetchd.png" alt="Farfetch'd">
+            Farfetch'd
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/doduo.png" alt="Doduo">
+            Doduo
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/dodrio.png" alt="Dodrio">
+            Dodrio
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/seel.png" alt="Seel">
+            Seel
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/dewgong.png" alt="Dewgong">
+            Dewgong
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/grimer.png" alt="Grimer">
+            Grimer
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/muk.png" alt="Muk">
+            Muk
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/shellder.png" alt="Shellder">
+            Shellder
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/cloyster.png" alt="Cloyster">
+            Cloyster
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/gastly.png" alt="Gastly">
+            Gastly
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/haunter.png" alt="Haunter">
+            Haunter
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/gengar.png" alt="Gengar">
+            Gengar
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/onix.png" alt="Onix">
+            Onix
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/drowzee.png" alt="Drowzee">
+            Drowzee
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/hypno.png" alt="Hypno">
+            Hypno
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/krabby.png" alt="Krabby">
+            Krabby
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/kingler.png" alt="Kingler">
+            Kingler
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/voltorb.png" alt="Voltorb">
+            Voltorb
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/electrode.png" alt="Electrode">
+            Electrode
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/exeggcute.png" alt="Exeggcute">
+            Exeggcute
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/exeggutor.png" alt="Exeggutor">
+            Exeggutor
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/cubone.png" alt="Cubone">
+            Cubone
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/marowak.png" alt="Marowak">
+            Marowak
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/hitmonlee.png" alt="Hitmonlee">
+            Hitmonlee
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/hitmonchan.png" alt="Hitmonchan">
+            Hitmonchan
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/lickitung.png" alt="Lickitung">
+            Lickitung
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/koffing.png" alt="Koffing">
+            Koffing
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/weezing.png" alt="Weezing">
+            Weezing
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/rhyhorn.png" alt="Rhyhorn">
+            Rhyhorn
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/rhydon.png" alt="Rhydon">
+            Rhydon
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/chansey.png" alt="Chansey">
+            Chansey
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/tangela.png" alt="Tangela">
+            Tangela
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/kangaskhan.png" alt="Kangaskhan">
+            Kangaskhan
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/horsea.png" alt="Horsea">
+            Horsea
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/seadra.png" alt="Seadra">
+            Seadra
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/goldeen.png" alt="Goldeen">
+            Goldeen
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/seaking.png" alt="Seaking">
+            Seaking
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/staryu.png" alt="Staryu">
+            Staryu
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/starmie.png" alt="Starmie">
+            Starmie
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/mr-mime.png" alt="Mr. Mime">
+            Mr. Mime
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/scyther.png" alt="Scyther">
+            Scyther
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/jynx.png" alt="Jynx">
+            Jynx
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/electabuzz.png" alt="Electabuzz">
+            Electabuzz
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/magmar.png" alt="Magmar">
+            Magmar
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/pinsir.png" alt="Pinsir">
+            Pinsir
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/tauros.png" alt="Tauros">
+            Tauros
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/magikarp.png" alt="Magikarp">
+            Magikarp
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/gyarados.png" alt="Gyarados">
+            Gyarados
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/lapras.png" alt="Lapras">
+            Lapras
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/ditto.png" alt="Ditto">
+            Ditto
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/eevee.png" alt="Eevee">
+            Eevee
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/vaporeon.png" alt="Vaporeon">
+            Vaporeon
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/jolteon.png" alt="Jolteon">
+            Jolteon
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/flareon.png" alt="Flareon">
+            Flareon
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/porygon.png" alt="Porygon">
+            Porygon
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/omanyte.png" alt="Omanyte">
+            Omanyte
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/omastar.png" alt="Omastar">
+            Omastar
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/kabuto.png" alt="Kabuto">
+            Kabuto
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/kabutops.png" alt="Kabutops">
+            Kabutops
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/aerodactyl.png" alt="Aerodactyl">
+            Aerodactyl
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/snorlax.png" alt="Snorlax">
+            Snorlax
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/articuno.png" alt="Articuno">
+            Articuno
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/zapdos.png" alt="Zapdos">
+            Zapdos
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/moltres.png" alt="Moltres">
+            Moltres
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/dratini.png" alt="Dratini">
+            Dratini
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/dragonair.png" alt="Dragonair">
+            Dragonair
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/dragonite.png" alt="Dragonite">
+            Dragonite
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/mewtwo.png" alt="Mewtwo">
+            Mewtwo
+        </li>
+        <li>
+            <img src="https://img.pokemondb.net/sprites/red-blue/normal/mew.png" alt="Mew">
+            Mew
+        </li>
+       
+    </ul>
+
+    <script>
+        const pokemon = document.querySelectorAll('li');
+        const displayPokemon = document.getElementById('display_pokemon');
+
+        pokemon.forEach(poke => {
+            poke.addEventListener('click', () => {
+                console.log(poke.innerHTML);
+                displayPokemon.innerHTML = `<div class="active">${poke.innerHTML}</div>`;
+            });
+        });
+    </script>
+</body>
+</html>
