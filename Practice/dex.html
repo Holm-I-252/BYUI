@@ -8,91 +8,10 @@
       href="https://fonts.cdnfonts.com/css/pokemon-solid"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="dex.css">
 
     <style>
       @import url("https://fonts.cdnfonts.com/css/pokemon-solid");
-    </style>
-
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        background-color: rgb(146, 33, 33);
-        margin: 0;
-        padding: 20px;
-      }
-      h1 {
-        text-align: center;
-        color: white;
-        font-family: "Pokemon Solid", sans-serif;
-        letter-spacing: 2px;
-      }
-      ul {
-        list-style-type: none;
-        padding: 0;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-      }
-      li {
-        background-color: #fff;
-        margin: 5px;
-        padding: 10px;
-        border: 1px solid #ddd;
-        border-radius: 4px;
-        width: 20%;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
-      li img {
-        margin-bottom: 10px;
-      }
-
-      #display_pokemon {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 20px;
-        flex-direction: column;
-      }
-
-      #display_pokemon img {
-        margin-right: 10px;
-        margin-bottom: 40px;
-        width: 200px;
-      }
-      .active {
-        font-size: 30px;
-        font-weight: 900;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-      }
-      #display {
-        background-color: white;
-        border: 5px solid gray;
-        border-radius: 10px;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        padding: 50px;
-      }
-
-      #type {
-        text-transform: capitalize;
-      }
-      #search {
-        width: 80%;
-        padding: 10px;
-        margin-left: 100px;
-        margin-bottom: 30px;
-        border-radius: 5px;
-        border: 1px solid #ddd;
-      }
     </style>
   </head>
     <h1>Pokedex</h1>
@@ -110,6 +29,7 @@
         <h3 id="speed"></h3>
       </div>
     </div>
+    <h2>Kanto</h2>
     <ul>
       <li>
         <img
@@ -1168,6 +1088,9 @@
         />
         Mew
       </li>
+      </ul>
+      <h2>Johto</h2>
+      <ul>
       <li>
         <img
           src="https://img.pokemondb.net/sprites/silver/normal/chikorita.png"
@@ -1869,6 +1792,10 @@
         />
         Celebi
       </li>
+
+      </ul>
+      <h2>Hoenn</h2>
+      <ul>
     <li>
       <img
         src="https://img.pokemondb.net/sprites/ruby-sapphire/normal/treecko.png"
@@ -2815,141 +2742,761 @@
       Deoxys
     </li>
 </ul>
+<h2>Sinnoh</h2>
+<ul>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/turtwig.png"
+      alt="Turtwig"
+    />
+    Turtwig
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/grotle.png"
+      alt="Grotle"
+    />
+    Grotle
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/torterra.png"
+      alt="Torterra"
+    />
+    Torterra
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/chimchar.png"
+      alt="Chimchar"
+    />
+    Chimchar
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/monferno.png"
+      alt="Monferno"
+    />
+    Monferno
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/infernape.png"
+      alt="Infernape"
+    />
+    Infernape
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/piplup.png"
+      alt="Piplup"
+    />
+    Piplup
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/prinplup.png"
+      alt="Prinplup"
+    />
+    Prinplup
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/empoleon.png"
+      alt="Empoleon"
+    />
+    Empoleon
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/starly.png"
+      alt="Starly"
+    />
+    Starly
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/staravia.png"
+      alt="Staravia"
+    />
+    Staravia
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/staraptor.png"
+      alt="Staraptor"
+    />
+    Staraptor
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/bidoof.png"
+      alt="Bidoof"
+    />
+    Bidoof
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/bibarel.png"
+      alt="Bibarel"
+    />
+    Bibarel
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/kricketot.png"
+      alt="Kricketot"
+    />
+    Kricketot
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/kricketune.png"
+      alt="Kricketune"
+    />
+    Kricketune
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/shinx.png"
+      alt="Shinx"
+    />
+    Shinx
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/luxio.png"
+      alt="Luxio"
+    />
+    Luxio
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/luxray.png"
+      alt="Luxray"
+    />
+    Luxray
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/budew.png"
+      alt="Budew"
+    />
+    Budew
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/roserade.png"
+      alt="Roserade"
+    />
+    Roserade
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/cranidos.png"
+      alt="Cranidos"
+    />
+    Cranidos
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/rampardos.png"
+      alt="Rampardos"
+    />
+    Rampardos
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/shieldon.png"
+      alt="Shieldon"
+    />
+    Shieldon
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/bastiodon.png"
+      alt="Bastiodon"
+    />
+    Bastiodon
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/burmy.png"
+      alt="Burmy"
+    />
+    Burmy 
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/wormadam.png"
+      alt="Wormadam"
+    />
+    Wormadam
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/mothim.png"
+      alt="Mothim"
+    />
+    Mothim
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/combee.png"
+      alt="Combee"
+    />
+    Combee
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/vespiquen.png"
+      alt="Vespiquen"
+    />
+    Vespiquen
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/pachirisu.png"
+      alt="Pachirisu"
+    />
+    Pachirisu
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/buizel.png"
+      alt="Buizel"
+    />
+    Buizel
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/floatzel.png"
+      alt="Floatzel"
+    />
+    Floatzel
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/cherubi.png"
+      alt="Cherubi"
+    />
+    Cherubi
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/cherrim.png"
+      alt="Cherrim"
+    />
+    Cherrim
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/shellos.png"
+      alt="Shellos"
+    />
+    Shellos
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/gastrodon.png"
+      alt="Gastrodon"
+    />
+    Gastrodon
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/ambipom.png"
+      alt="Ambipom"
+    />
+    Ambipom
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/drifloon.png"
+      alt="Drifloon"
+    />
+    Drifloon
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/drifblim.png"
+      alt="Drifblim"
+    />
+    Drifblim
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/buneary.png"
+      alt="Buneary"
+    />
+    Buneary
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/lopunny.png"
+      alt="Lopunny"
+    />
+    Lopunny
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/mismagius.png"
+      alt="Mismagius"
+    />
+    Mismagius
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/honchkrow.png"
+      alt="Honchkrow"
+    />
+    Honchkrow
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/glameow.png"
+      alt="Glameow"
+    />
+    Glameow
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/purugly.png"
+      alt="Purugly"
+    />
+    Purugly
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/chingling.png"
+      alt="Chingling"
+    />
+    Chingling
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/stunky.png"
+      alt="Stunky"
+    />
+    Stunky
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/skuntank.png"
+      alt="Skuntank"
+    />
+    Skuntank
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/bronzor.png"
+      alt="Bronzor"
+    />
+    Bronzor
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/bronzong.png"
+      alt="Bronzong"
+    />
+    Bronzong
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/bonsly.png"
+      alt="Bonsly"
+    />
+    Bonsly
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/mime-jr.png"
+      alt="Mime Jr."
+    />
+    Mime Jr.
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/happiny.png"
+      alt="Happiny"
+    />
+    Happiny
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/chatot.png"
+      alt="Chatot"
+    />
+    Chatot
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/spiritomb.png"
+      alt="Spiritomb"
+    />
+    Spiritomb
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/gible.png"
+      alt="Gible"
+    />
+    Gible
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/gabite.png"
+      alt="Gabite"
+    />
+    Gabite
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/garchomp.png"
+      alt="Garchomp"
+    />
+    Garchomp
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/munchlax.png"
+      alt="Munchlax"
+    />
+    Munchlax
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/riolu.png"
+      alt="Riolu"
+    />
+    Riolu
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/lucario.png"
+      alt="Lucario"
+    />
+    Lucario
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/hippopotas.png"
+      alt="Hippopotas"
+    />
+    Hippopotas
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/hippowdon.png"
+      alt="Hippowdon"
+    />
+    Hippowdon
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/skorupi.png"
+      alt="Skorupi"
+    />
+    Skorupi
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/drapion.png"
+      alt="Drapion"
+    />
+    Drapion
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/croagunk.png"
+      alt="Croagunk"
+    />
+    Croagunk
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/toxicroak.png"
+      alt="Toxicroak"
+    />
+    Toxicroak
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/carnivine.png"
+      alt="Carnivine"
+    />
+    Carnivine
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/finneon.png"
+      alt="Finneon"
+    />
+    Finneon
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/lumineon.png"
+      alt="Lumineon"
+    />
+    Lumineon
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/mantyke.png"
+      alt="Mantyke"
+    />
+    Mantyke
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/snover.png"
+      alt="Snover"
+    />
+    Snover
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/abomasnow.png"
+      alt="Abomasnow"
+    />
+    Abomasnow
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/weavile.png"
+      alt="Weavile"
+    />
+    Weavile
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/magnezone.png"
+      alt="Magnezone"
+    />
+    Magnezone
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/lickilicky.png"
+      alt="Lickilicky"
+    />
+    Lickilicky
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/rhyperior.png"
+      alt="Rhyperior"
+    />
+    Rhyperior
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/tangrowth.png"
+      alt="Tangrowth"
+    />
+    Tangrowth
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/electivire.png"
+      alt="Electivire"
+    />
+    Electivire
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/magmortar.png"
+      alt="Magmortar"
+    />
+    Magmortar
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/togekiss.png"
+      alt="Togekiss"
+    />
+    Togekiss
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/yanmega.png"
+      alt="Yanmega"
+    />
+    Yanmega
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/leafeon.png"
+      alt="Leafeon"
+    />
+    Leafeon
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/glaceon.png"
+      alt="Glaceon"
+    />
+    Glaceon
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/gliscor.png"
+      alt="Gliscor"
+    />
+    Gliscor
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/mamoswine.png"
+      alt="Mamoswine"
+    />
+    Mamoswine
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/porygon-z.png"
+      alt="Porygon-Z"
+    />
+    Porygon-Z
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/gallade.png"
+      alt="Gallade"
+    />
+    Gallade
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/probopass.png"
+      alt="Probopass"
+    />
+    Probopass
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/dusknoir.png"
+      alt="Dusknoir"
+    />
+    Dusknoir
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/froslass.png"
+      alt="Froslass"
+    />
+    Froslass
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/rotom.png"
+      alt="Rotom"
+    />
+    Rotom
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/uxie.png"
+      alt="Uxie"
+    />
+    Uxie
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/mesprit.png"
+      alt="Mesprit"
+    />
+    Mesprit
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/azelf.png"
+      alt="Azelf"
+    />
+    Azelf
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/dialga.png"
+      alt="Dialga"
+    />
+    Dialga
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/palkia.png"
+      alt="Palkia"
+    />
+    Palkia
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/heatran.png"
+      alt="Heatran"
+    />
+    Heatran
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/regigigas.png"
+      alt="Regigigas"
+    />
+    Regigigas
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/giratina-altered.png"
+      alt="Giratina"
+    />
+    Giratina
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/cresselia.png"
+      alt="Cresselia"
+    />
+    Cresselia
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/phione.png"
+      alt="Phione"
+    />
+    Phione
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/manaphy.png"
+      alt="Manaphy"
+    />
+    Manaphy
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/darkrai.png"
+      alt="Darkrai"
+    />
+    Darkrai
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/shaymin-land.png"
+      alt="Shaymin"
+    />
+    Shaymin
+  </li>
+  <li>
+    <img
+      src="https://img.pokemondb.net/sprites/diamond-pearl/normal/arceus.png"
+      alt="Arceus"
+    />
+    Arceus
+  </li>
+
+</ul>
 
 
-    <script>
-      const pokemon = document.querySelectorAll("li");
-      const displayPokemon = document.getElementById("display_pokemon");
-
-      function search(){
-        let input = document.getElementById('search').value
-        input=input.toLowerCase();
-
-        let url = `https://pokeapi.co/api/v2/pokemon/${input}`;
-
-          console.log(url);
-
-          fetch(url)
-            .then((response) => {
-              if (!response.ok) {
-                throw new Error("Network response was not ok");
-              }
-              return response.json();
-            })
-            .then((data) => {
-              console.log(data);
-
-              let type = document.getElementById("type");
-              if (data.types.length > 1) {
-                type.innerHTML = `<h3>Type: ${data.types[0].type.name} / ${data.types[1].type.name}</h3>`;
-              } else {
-                type.innerHTML = `<h3>Type: ${data.types[0].type.name}</h3>`;
-              }
-
-              let hp = document.getElementById("hp");
-              hp.innerHTML = `<h3>HP: ${data.stats[0].base_stat}</h3>`;
-
-              let attack = document.getElementById("attack");
-              attack.innerHTML = `<h3>Attack: ${data.stats[1].base_stat}</h3>`;
-
-              let defense = document.getElementById("defense");
-              defense.innerHTML = `<h3>Defense: ${data.stats[2].base_stat}</h3>`;
-
-              let specialAttack = document.getElementById("special-attack");
-              specialAttack.innerHTML = `<h3>Special Attack: ${data.stats[3].base_stat}</h3>`;
-
-              let specialDefense = document.getElementById("special-defense");
-              specialDefense.innerHTML = `<h3>Special Defense: ${data.stats[4].base_stat}</h3>`;
-
-              let speed = document.getElementById("speed");
-              speed.innerHTML = `<h3>Speed: ${data.stats[5].base_stat}</h3>`;
-
-              let id = data.id;
-              console.log(id);
-              
-              if (data.id < 151){
-                  displayPokemon.innerHTML = `<div class="active"><img src="https://img.pokemondb.net/sprites/red-blue/normal/${input}.png" alt="${input}"/>${input}</div>`;
-                } else if (data.id < 251){
-                displayPokemon.innerHTML = `<div class="active"><img src="https://img.pokemondb.net/sprites/crystal/normal/${input}.png" alt="${input}"/>${input}</div>`;
-            } else if (data.id < 386){
-                displayPokemon.innerHTML = `<div class="active"><img src="https://img.pokemondb.net/sprites/ruby-sapphire/normal/${input}.png" alt="${input}"/>${input}</div>`;
-            } else if (data.id < 494){
-                displayPokemon.innerHTML = `<div class="active"><img src="https://img.pokemondb.net/sprites/black-white/normal/${input}.png" alt="${input}"/>${input}</div>`;
-            } else if (data.id < 650){
-                displayPokemon.innerHTML = `<div class="active"><img src="https://img.pokemondb.net/sprites/black-white/normal/${input}.png" alt="${input}"/>${input}</div>`;
-            } else if (data.id < 722){
-                displayPokemon.innerHTML = `<div class="active"><img src="https://img.pokemondb.net/sprites/black-white/normal/${input}.png" alt="${input}"/>${input}</div>`;
-            } else if (data.id < 810){
-                displayPokemon.innerHTML = `<div class="active"><img src="https://img.pokemondb.net/sprites/black-white/normal/${input}.png" alt="${input}"/>${input}</div>`;
-            } else if (data.id < 1000){
-                displayPokemon.innerHTML = `<div class="active"><img src="https://img.pokemondb.net/sprites/black-white/normal/${input}.png" alt="${input}"/>${input}</div>`;
-            } else {
-                displayPokemon.innerHTML = `<div class="active"><img src="https://img.pokemondb.net/sprites/black-white/normal/${input}.png" alt="${input}"/>${input}</div>`;
-            } 
-            input = "";
-        })
-            .catch((error) => {
-              console.error("Error fetching data from the API: ", error);
-            });
-
-        
-      }
-
-      document.getElementById("search_btn").addEventListener("click", search);
-
-      pokemon.forEach((poke) => {
-        poke.addEventListener("click", () => {
-          displayPokemon.innerHTML = `<div class="active">${poke.innerHTML}</div>`;
-
-          let url = `https://pokeapi.co/api/v2/pokemon/${poke.innerText.toLowerCase()}`;
-
-          console.log(url);
-
-          fetch(url)
-            .then((response) => {
-              if (!response.ok) {
-                throw new Error("Network response was not ok");
-              }
-              return response.json();
-            })
-            .then((data) => {
-              console.log(data);
-
-              let type = document.getElementById("type");
-              if (data.types.length > 1) {
-                type.innerHTML = `<h3>Type: ${data.types[0].type.name} / ${data.types[1].type.name}</h3>`;
-              } else {
-                type.innerHTML = `<h3>Type: ${data.types[0].type.name}</h3>`;
-              }
-
-              let hp = document.getElementById("hp");
-              hp.innerHTML = `<h3>HP: ${data.stats[0].base_stat}</h3>`;
-
-              let attack = document.getElementById("attack");
-              attack.innerHTML = `<h3>Attack: ${data.stats[1].base_stat}</h3>`;
-
-              let defense = document.getElementById("defense");
-              defense.innerHTML = `<h3>Defense: ${data.stats[2].base_stat}</h3>`;
-
-              let specialAttack = document.getElementById("special-attack");
-              specialAttack.innerHTML = `<h3>Special Attack: ${data.stats[3].base_stat}</h3>`;
-
-              let specialDefense = document.getElementById("special-defense");
-              specialDefense.innerHTML = `<h3>Special Defense: ${data.stats[4].base_stat}</h3>`;
-
-              let speed = document.getElementById("speed");
-              speed.innerHTML = `<h3>Speed: ${data.stats[5].base_stat}</h3>`;
-            })
-            .catch((error) => {
-              console.error("Error fetching data from the API: ", error);
-            });
-
-          window.scrollTo({
-            top: 0,
-            behavior: "smooth",
-          });
-        });
-      });
-    </script>
+    <script src="dex.js"></script>
   </body>
 </html>

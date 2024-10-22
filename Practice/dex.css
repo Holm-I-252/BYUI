@@ -1,0 +1,99 @@
+@import url("https://fonts.cdnfonts.com/css/pokemon-solid");
+@import url("https://fonts.cdnfonts.com/css/pokemon-hollow");
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(146, 33, 33);
+    margin: 0;
+    padding: 20px;
+  }
+  h1 {
+    text-align: center;
+    color: white;
+    font-family: "Pokemon Hollow", sans-serif;
+    letter-spacing: 2px;
+  }
+  ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  li {
+    background-color: #fff;
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 20%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  li img {
+    margin-bottom: 10px;
+  }
+
+  #display_pokemon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    flex-direction: column;
+  }
+
+  #display_pokemon img {
+    margin-right: 10px;
+    margin-bottom: 40px;
+    width: 200px;
+  }
+  .active {
+    font-size: 30px;
+    font-weight: 900;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 50%;
+  }
+  #display {
+    background-color: white;
+    border: 5px solid gray;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px;
+  }
+
+  #type {
+    text-transform: capitalize;
+  }
+  #search {
+    width: 80%;
+    padding: 10px;
+    margin-left: 100px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+  }
+  h2 {
+    color: white;
+    text-align: center;
+    font-size: 30px;
+  }
+
+  .move {
+    font-size: 10px;
+    padding: 5px;
+  }
+  #moves {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgray;
+  }
