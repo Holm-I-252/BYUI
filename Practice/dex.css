@@ -43,6 +43,7 @@ body {
     align-items: center;
     margin-top: 20px;
     flex-direction: column;
+    max-width: 50%;
   }
 
   #display_pokemon img {
@@ -57,7 +58,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    max-width: 50%;
+  
   }
   #display {
     background-color: white;
@@ -72,6 +73,7 @@ body {
   #type {
     text-transform: capitalize;
   }
+
   #search {
     width: 80%;
     padding: 10px;
@@ -86,14 +88,48 @@ body {
     font-size: 30px;
   }
 
-  .move {
-    font-size: 10px;
+  .move, .ability {
+    font-size: 15px;
     padding: 5px;
+    text-transform: capitalize;
   }
-  #moves {
+  #moves, #abilities {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     background-color: lightgray;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px grey;
+    font-size: 20px;
+    width: 100%;
+    margin-top: 20px;
   }
+
+  #abilities {
+    flex-direction: column;
+  }
+
+  #stats {
+    max-width: 50%;
+    background-color: lightgray;
+    padding: 10px;
+    border-radius: 10px;
+    height: 100%;
+  }
+
+#show_moves {
+  margin-top: 20px;
+}
+
+#hidden {
+  color: green;
+}
+
+#not_hidden {
+  color: red;
+}
+
+#ability_info {
+  font-size: 12px;
+}

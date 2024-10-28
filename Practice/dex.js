@@ -50,43 +50,48 @@ const pokemon = document.querySelectorAll("li");
               console.log(id);
               
               if (data.id < 151){
-                  displayPokemon.innerHTML = `<div class="active"><img src="https://img.pokemondb.net/sprites/red-blue/normal/${input}.png" alt="${input}"/>${input}</div>`;
+                  displayPokemon.innerHTML = `<div class="active"><img src="https://img.pokemondb.net/sprites/red-blue/normal/${input}.png" alt="${input}"/>${input}<button id="show_moves">Show Level-Up Moves</button><div id="moves"></div></div>`;
                 } else if (data.id < 251){
-                displayPokemon.innerHTML = `<div class="active"><img src="https://img.pokemondb.net/sprites/crystal/normal/${input}.png" alt="${input}"/>${input}</div>`;
+                displayPokemon.innerHTML = `<div class="active"><img src="https://img.pokemondb.net/sprites/crystal/normal/${input}.png" alt="${input}"/>${input}<button id="show_moves">Show Level-Up Moves</button><div id="moves"></div></div>`;
             } else if (data.id < 386){
-                displayPokemon.innerHTML = `<div class="active"><img src="https://img.pokemondb.net/sprites/ruby-sapphire/normal/${input}.png" alt="${input}"/>${input}</div>`;
+                displayPokemon.innerHTML = `<div class="active"><img src="https://img.pokemondb.net/sprites/ruby-sapphire/normal/${input}.png" alt="${input}"/>${input}<button id="show_moves">Show Level-Up Moves</button><div id="moves"></div></div>`;
             } else if (data.id < 494){
-                displayPokemon.innerHTML = `<div class="active"><img src="https://img.pokemondb.net/sprites/black-white/normal/${input}.png" alt="${input}"/>${input}</div>`;
+                displayPokemon.innerHTML = `<div class="active"><img src="https://img.pokemondb.net/sprites/black-white/normal/${input}.png" alt="${input}"/>${input}<button id="show_moves">Show Level-Up Moves</button><div id="moves"></div></div>`;
             } else if (data.id < 650){
-                displayPokemon.innerHTML = `<div class="active"><img src="https://img.pokemondb.net/sprites/black-white/normal/${input}.png" alt="${input}"/>${input}</div>`;
+                displayPokemon.innerHTML = `<div class="active"><img src="https://img.pokemondb.net/sprites/black-white/normal/${input}.png" alt="${input}"/>${input}<button id="show_moves">Show Level-Up Moves</button><div id="moves"></div></div>`;
             } else if (data.id < 722){
-                displayPokemon.innerHTML = `<div class="active"><img src="https://img.pokemondb.net/sprites/black-white/normal/${input}.png" alt="${input}"/>${input}</div>`;
+                displayPokemon.innerHTML = `<div class="active"><img src="https://img.pokemondb.net/sprites/black-white/normal/${input}.png" alt="${input}"/>${input}<button id="show_moves">Show Level-Up Moves</button><div id="moves"></div></div>`;
             } else if (data.id < 810){
-                displayPokemon.innerHTML = `<div class="active"><img src="https://img.pokemondb.net/sprites/black-white/normal/${input}.png" alt="${input}"/>${input}</div>`;
+                displayPokemon.innerHTML = `<div class="active"><img src="https://img.pokemondb.net/sprites/black-white/normal/${input}.png" alt="${input}"/>${input}<button id="show_moves">Show Level-Up Moves</button><div id="moves"></div></div>`;
             } else if (data.id < 1000){
-                displayPokemon.innerHTML = `<div class="active"><img src="https://img.pokemondb.net/sprites/black-white/normal/${input}.png" alt="${input}"/>${input}</div>`;
+                displayPokemon.innerHTML = `<div class="active"><img src="https://img.pokemondb.net/sprites/black-white/normal/${input}.png" alt="${input}"/>${input}<button id="show_moves">Show Level-Up Moves</button><div id="moves"></div></div>`;
             } else {
-                displayPokemon.innerHTML = `<div class="active"><img src="https://img.pokemondb.net/sprites/black-white/normal/${input}.png" alt="${input}"/>${input}</div>`;
+                displayPokemon.innerHTML = `<div class="active"><img src="https://img.pokemondb.net/sprites/black-white/normal/${input}.png" alt="${input}"/>${input}<button id="show_moves">Show Level-Up Moves</button><div id="moves"></div></div>`;
             } 
+
+            activePokemon = input;
+
             input = "";
+
+            document.getElementById("show_moves").addEventListener("click", showMoves);
         })
             .catch((error) => {
               console.error("Error fetching data from the API: ", error);
             });
 
-        
       }
 
       document.getElementById("search_btn").addEventListener("click", search);
 
       pokemon.forEach((poke) => {
         poke.addEventListener("click", () => {
-          displayPokemon.innerHTML = `<div class="active">${poke.innerHTML}<button id="show_moves">Show Moves</button><div id="moves"></div></div>`;
+          displayPokemon.innerHTML = `<div class="active">${poke.innerHTML}<button id="show_moves">Show Level-Up Moves</button><div id="moves"></div><button id="show_abilities">Show Abilities</button><div id="abilities"></div></div>`;
 
           let url = `https://pokeapi.co/api/v2/pokemon/${poke.innerText.toLowerCase()}`;
           activePokemon = poke.innerText.toLowerCase();
           
           document.getElementById("show_moves").addEventListener("click", showMoves);
+          document.getElementById("show_abilities").addEventListener("click", showAbilities);
           
           console.log(url);
 
@@ -137,6 +142,7 @@ const pokemon = document.querySelectorAll("li");
       });
 
       function showMoves(){
+        document.getElementById("show_moves").remove();
         let url = `https://pokeapi.co/api/v2/pokemon/${activePokemon}`;
 
         fetch(url)
@@ -152,7 +158,41 @@ const pokemon = document.querySelectorAll("li");
             let moves = document.getElementById("moves");
 
             data.moves.forEach((move) => {
-              moves.innerHTML += `<p class="move">${move.move.name}</p>`;
+              if (move.version_group_details[0].move_learn_method.name == "level-up") {
+                moves.innerHTML += `<p class="move">${move.move.name}: lvl ${move.version_group_details[0].level_learned_at},</p>`;
+              }
+            });
+          })
+          .catch((error) => {
+            console.error("Error fetching data from the API: ", error);
+          });
+      }
+
+      function showAbilities(){
+        document.getElementById("show_abilities").remove();
+        let url = `https://pokeapi.co/api/v2/pokemon/${activePokemon}`;
+
+        fetch(url)
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error("Network response was not ok");
+            }
+            return response.json();
+          })
+          .then((data) => {
+            console.log(data);
+
+            let abilities = document.getElementById("abilities");
+
+            abilities.innerHTML += `<h3 id="ability_info">Green = Not hidden, Red = Hidden</h3><div id="ability_container"></div>`;
+
+            data.abilities.forEach((ability) => {
+              if (ability.is_hidden == false) {
+                document.getElementById("ability_container").innerHTML += `<p class="ability" id="not_hidden">${ability.ability.name}</p>`;
+              }
+              else {
+                document.getElementById("ability_container").innerHTML += `<p class="ability" id="hidden">${ability.ability.name}</p>`;
+              }
             });
           })
           .catch((error) => {
