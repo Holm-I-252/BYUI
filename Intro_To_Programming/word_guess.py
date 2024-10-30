@@ -1,6 +1,6 @@
 import random
 
-word_list = ["Apple", "Chair", "Bread", "Flute", "Storm", "Green", "Light", "Clock", "Frame", "Dance", "Beach", "Blaze", "Crisp", "Quest", "Scale", "Spicy", "Toast", "Vivid", "Zebra", "Royal", "Earth", "Funky", "Grape", "Hasty", "Jolly", "Knead", "Lemon", "Mirth", "Night", "Quest"]
+word_list = ["Apple", "Chair", "Bread", "Flute", "Storm", "Green", "Light", "Clock", "Frame", "Dance", "Beach", "Blaze", "Crisp", "Quest", "Scale", "Spicy", "Toast", "Vivid", "Zebra", "Royal", "Earth", "Funky", "Grape", "Hasty", "Jolly", "Knead", "Lemon", "Mirth", "Quest"]
 
 running = True
 

@@ -3,6 +3,8 @@ print("Welcome to the shopping cart program!")
 cart = []
 price = []
 
+out_of_stock = ["pizza", "chips", "soda", "candy", "ice cream", "cookies", "cake", "donuts", "chocolate", "gum"]
+
 running = True
 
 while running:
@@ -13,12 +15,16 @@ while running:
 
     if choice == "1":
         item = input("Enter the item you would like to add: ")
-        cart.append(item)
+        if item in out_of_stock:
+            print(f"\nSorry, {item} is out of stock. \n")
+            continue
+        else:
+            cart.append(item)
 
-        item_price = float(input("Enter the price of the item: "))
-        price.append(item_price)
+            item_price = float(input("Enter the price of the item: "))
+            price.append(item_price)
 
-        print(f"{item} has been added to the cart.")
+            print(f"{item} has been added to the cart.")
 
     elif choice == "2":
         if len(cart) == 0:
