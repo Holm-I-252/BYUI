@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku Board</title>
+    <style>
+        .sudoku-board {
+            display: grid;
+            grid-template-columns: repeat(9, 1fr);
+            gap: 1px;
+            width: 397px;
+            height: 397px;
+            border: 2px solid black;
+        }
+        .sudoku-cell {
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            font-size: 20px;
+            border: 1px solid #000;
+        }
+        .sudoku-cell:hover {
+            background-color: #f0f0f0;
+        }
+        .sudoku-cell:nth-child(3n) {
+            border-right: 2px solid black;
+        }
+        .sudoku-cell:nth-child(27n + 1) {
+            border-left: 2px solid black;
+        }
+        .sudoku-cell:nth-child(n + 19):nth-child(-n + 27),
+        .sudoku-cell:nth-child(n + 46):nth-child(-n + 54),
+        .sudoku-cell:nth-child(n + 73):nth-child(-n + 81) {
+            border-bottom: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="sudoku-board">
+        <div class="sudoku-cell group-1 row-1" id="row_1_col_1"></div>
+        <div class="sudoku-cell group-1 row-1" id="row_1_col_2"></div>
+        <div class="sudoku-cell group-1 row-1" id="row_1_col_3"></div>
+        <div class="sudoku-cell group-2 row-1" id="row_1_col_4"></div>
+        <div class="sudoku-cell group-2 row-1" id="row_1_col_5"></div>
+        <div class="sudoku-cell group-2 row-1" id="row_1_col_6"></div>
+        <div class="sudoku-cell group-3 row-1" id="row_1_col_7"></div>
+        <div class="sudoku-cell group-3 row-1" id="row_1_col_8"></div>
+        <div class="sudoku-cell group-3 row-1" id="row_1_col_9"></div>
+        <div class="sudoku-cell group-1 row-2" id="row_2_col_1"></div>
+        <div class="sudoku-cell group-1 row-2" id="row_2_col_2"></div>
+        <div class="sudoku-cell group-1 row-2" id="row_2_col_3"></div>
+        <div class="sudoku-cell group-2 row-2" id="row_2_col_4"></div>
+        <div class="sudoku-cell group-2 row-2" id="row_2_col_5"></div>
+        <div class="sudoku-cell group-2 row-2" id="row_2_col_6"></div>
+        <div class="sudoku-cell group-3 row-2" id="row_2_col_7"></div>
+            <div class="sudoku-cell group-3 row-2" id="row_2_col_8"></div>
+            <div class="sudoku-cell group-3 row-2" id="row_2_col_9"></div>
+            <div class="sudoku-cell group-1 row-3" id="row_3_col_1"></div>
+            <div class="sudoku-cell group-1 row-3" id="row_3_col_2"></div>
+            <div class="sudoku-cell group-1 row-3" id="row_3_col_3"></div>
+            <div class="sudoku-cell group-2 row-3" id="row_3_col_4"></div>
+            <div class="sudoku-cell group-2 row-3" id="row_3_col_5"></div>
+            <div class="sudoku-cell group-2 row-3" id="row_3_col_6"></div>
+            <div class="sudoku-cell group-3 row-3" id="row_3_col_7"></div>
+            <div class="sudoku-cell group-3 row-3" id="row_3_col_8"></div>
+            <div class="sudoku-cell group-3 row-3" id="row_3_col_9"></div>
+            <div class="sudoku-cell group-4 row-4" id="row_4_col_1"></div>
+            <div class="sudoku-cell group-4 row-4" id="row_4_col_2"></div>
+            <div class="sudoku-cell group-4 row-4" id="row_4_col_3"></div>
+            <div class="sudoku-cell group-5 row-4" id="row_4_col_4"></div>
+            <div class="sudoku-cell group-5 row-4" id="row_4_col_5"></div>
+            <div class="sudoku-cell group-5 row-4" id="row_4_col_6"></div>
+            <div class="sudoku-cell group-6 row-4" id="row_4_col_7"></div>
+            <div class="sudoku-cell group-6 row-4" id="row_4_col_8"></div>
+            <div class="sudoku-cell group-6 row-4" id="row_4_col_9"></div>
+            <div class="sudoku-cell group-4 row-5" id="row_5_col_1"></div>
+            <div class="sudoku-cell group-4 row-5" id="row_5_col_2"></div>
+            <div class="sudoku-cell group-4 row-5" id="row_5_col_3"></div>
+            <div class="sudoku-cell group-5 row-5" id="row_5_col_4"></div>
+            <div class="sudoku-cell group-5 row-5" id="row_5_col_5"></div>
+            <div class="sudoku-cell group-5 row-5" id="row_5_col_6"></div>
+            <div class="sudoku-cell group-6 row-5" id="row_5_col_7"></div>
+            <div class="sudoku-cell group-6 row-5" id="row_5_col_8"></div>
+            <div class="sudoku-cell group-6 row-5" id="row_5_col_9"></div>
+            <div class="sudoku-cell group-4 row-6" id="row_6_col_1"></div>
+            <div class="sudoku-cell group-4 row-6" id="row_6_col_2"></div>
+            <div class="sudoku-cell group-4 row-6" id="row_6_col_3"></div>
+            <div class="sudoku-cell group-5 row-6" id="row_6_col_4"></div>
+            <div class="sudoku-cell group-5 row-6" id="row_6_col_5"></div>
+            <div class="sudoku-cell group-5 row-6" id="row_6_col_6"></div>
+            <div class="sudoku-cell group-6 row-6" id="row_6_col_7"></div>
+            <div class="sudoku-cell group-6 row-6" id="row_6_col_8"></div>
+            <div class="sudoku-cell group-6 row-6" id="row_6_col_9"></div>
+            <div class="sudoku-cell group-7 row-7" id="row_7_col_1"></div>
+            <div class="sudoku-cell group-7 row-7" id="row_7_col_2"></div>
+            <div class="sudoku-cell group-7 row-7" id="row_7_col_3"></div>
+            <div class="sudoku-cell group-8 row-7" id="row_7_col_4"></div>
+            <div class="sudoku-cell group-8 row-7" id="row_7_col_5"></div>
+            <div class="sudoku-cell group-8 row-7" id="row_7_col_6"></div>
+            <div class="sudoku-cell group-9 row-7" id="row_7_col_7"></div>
+            <div class="sudoku-cell group-9 row-7" id="row_7_col_8"></div>
+            <div class="sudoku-cell group-9 row-7" id="row_7_col_9"></div>
+            <div class="sudoku-cell group-7 row-8" id="row_8_col_1"></div>
+            <div class="sudoku-cell group-7 row-8" id="row_8_col_2"></div>
+            <div class="sudoku-cell group-7 row-8" id="row_8_col_3"></div>
+            <div class="sudoku-cell group-8 row-8" id="row_8_col_4"></div>
+            <div class="sudoku-cell group-8 row-8" id="row_8_col_5"></div>
+            <div class="sudoku-cell group-8 row-8" id="row_8_col_6"></div>
+            <div class="sudoku-cell group-9 row-8" id="row_8_col_7"></div>
+            <div class="sudoku-cell group-9 row-8" id="row_8_col_8"></div>
+            <div class="sudoku-cell group-9 row-8" id="row_8_col_9"></div>
+            <div class="sudoku-cell group-7 row-9" id="row_9_col_1"></div>
+            <div class="sudoku-cell group-7 row-9" id="row_9_col_2"></div>
+            <div class="sudoku-cell group-7 row-9" id="row_9_col_3"></div>
+            <div class="sudoku-cell group-8 row-9" id="row_9_col_4"></div>
+            <div class="sudoku-cell group-8 row-9" id="row_9_col_5"></div>
+            <div class="sudoku-cell group-8 row-9" id="row_9_col_6"></div>
+            <div class="sudoku-cell group-9 row-9" id="row_9_col_7"></div>
+            <div class="sudoku-cell group-9 row-9" id="row_9_col_8"></div>
+            <div class="sudoku-cell group-9 row-9" id="row_9_col_9"></div>
+        
+    </div>
+
+    <script>
+        const sudokuBoard = document.querySelector('.sudoku-board');
+        const sudokuCells = document.querySelectorAll('.sudoku-cell');
+
+        const group_1 = document.querySelectorAll('.group-1');
+        const group_2 = document.querySelectorAll('.group-2');
+        const group_3 = document.querySelectorAll('.group-3');
+        const group_4 = document.querySelectorAll('.group-4');
+        const group_5 = document.querySelectorAll('.group-5');
+        const group_6 = document.querySelectorAll('.group-6');
+        const group_7 = document.querySelectorAll('.group-7');
+        const group_8 = document.querySelectorAll('.group-8');
+        const group_9 = document.querySelectorAll('.group-9');
+
+        const row_1 = document.querySelectorAll('.row-1');
+        const row_2 = document.querySelectorAll('.row-2');
+        const row_3 = document.querySelectorAll('.row-3');
+        const row_4 = document.querySelectorAll('.row-4');
+        const row_5 = document.querySelectorAll('.row-5');
+        const row_6 = document.querySelectorAll('.row-6');
+        const row_7 = document.querySelectorAll('.row-7');
+        const row_8 = document.querySelectorAll('.row-8');
+        const row_9 = document.querySelectorAll('.row-9');
+
+
+        let groups = [group_1, group_2, group_3, group_4, group_5, group_6, group_7, group_8, group_9];
+
+        let valid = false
+
+        
+            groups.forEach((group) => {
+                let nums = [1,2,3,4,5,6,7,8,9];
+                group.forEach((cell) => {
+                    let picked_num = nums[Math.floor(Math.random() * nums.length)];
+                    cell.innerHTML = picked_num;
+                    let index = nums.indexOf(picked_num);
+                    nums.splice(index, 1);
+                });
+            });
+    
+            let rows = [row_1, row_2, row_3, row_4, row_5, row_6, row_7, row_8, row_9];
+    
+            rows.forEach((row) =>{
+                let nums = [1,2,3,4,5,6,7,8,9];
+                let compare_nums = [];
+                row.forEach((cell) => {
+                    compare_nums.push(parseInt(cell.innerHTML));
+                });
+                if (nums == compare_nums.sort()){
+                    console.log('row is correct');
+                    valid = true;
+                } else {
+                    console.log('row is incorrect');
+                    valid = false;
+                }
+            })
+        
+        
+       
+
+    </script>
+</body>
+</html>
